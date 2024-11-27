@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.411,C:\Users\ceyda\Desktop\projects\learning-c-builder\simple-GUI-app\Unit1.cpp=C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.411,C:\Users\ceyda\Desktop\projects\learning-c-builder\simple-GUI-app\Unit1.h=C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.980,C:\Users\ceyda\Desktop\projects\learning-c-builder\simple-GUI-app\Project1.cbproj=C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.965,C:\Users\ceyda\Desktop\projects\learning-c-builder\simple-GUI-app\Project1PCH1.h=C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.411,C:\Users\ceyda\Desktop\projects\learning-c-builder\simple-GUI-app\Unit1.fmx=C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.942,=C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.466,=C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,74 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 328
+  ClientWidth = 264
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    Align = Scale
+    Position.X = 24.000000000000000000
+    Position.Y = 58.000000000000000000
+    Size.Width = 124.000000000000000000
+    Size.Height = 18.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Malzemeyi girin'
+    TabOrder = 1
+  end
+  object TaskInput: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    Position.X = 24.000000000000000000
+    Position.Y = 84.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object AddButton: TButton
+    Position.X = 160.000000000000000000
+    Position.Y = 84.000000000000000000
+    Size.Width = 64.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'EKLE'
+    TextSettings.Trimming = None
+    OnClick = AddButtonClick
+  end
+  object TasksListBox: TListBox
+    Position.X = 24.000000000000000000
+    Position.Y = 114.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 176.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 196.000000000000000000
+    Viewport.Height = 172.000000000000000000
+  end
+  object ClearButton: TButton
+    Position.X = 144.000000000000000000
+    Position.Y = 298.000000000000000000
+    TabOrder = 5
+    Text = 'Temizle'
+    TextSettings.Trimming = None
+    OnClick = AddClearButton
+  end
+  object SkLabel1: TSkLabel
+    Position.X = 93.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 54.599998474121090000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    Words = <
+      item
+        Text = 'SkLabel1'
+      end>
+  end
+end
