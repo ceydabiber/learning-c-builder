@@ -21,11 +21,7 @@ class Question{
 
    Question(){}
    Question(char* text, char* ans1, char* ans2, char* ans3, char* ans4, int correctAns){
-        Text=text;
-		Answer1=ans1;
-		Answer2=ans2;
-		Answer3=ans3;
-		CorrectAnswer=correctAns;
+
    }
 
 };
