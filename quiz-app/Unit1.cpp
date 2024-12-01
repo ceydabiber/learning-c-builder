@@ -1,6 +1,7 @@
 //---------------------------------------------------------------------------
 
 #include <fmx.h>
+#include <queue>
 #pragma hdrstop
 
 #include "Unit1.h"
@@ -15,13 +16,12 @@ class Question{
    char* Answer1;
    char* Answer2;
    char* Answer3;
-   char* Answer4;
 
    int CorrectAnswer;
 
    Question(){}
-   Question(char* text, char* ans1, char* ans2, char* ans3, char* ans4, int correctAns){
-        Text=text;
+   Question(char* text, char* ans1, char* ans2, char* ans3, int correctAns){
+		Text=text;
 		Answer1=ans1;
 		Answer2=ans2;
 		Answer3=ans3;
@@ -29,6 +29,12 @@ class Question{
    }
 
 };
+
+std::queue<Question> LoadQuestions(){
+
+	Question q1= Question(" Avustralya'nýn baþkenti neresidir?","Sydney","Melbourne","Canberra", 3);
+	Question q2= Question(" Kýzýl Gezegen olarak bilinen gezegen hangisidir?","Merkür","Mars","Jüpiter", 2);
+}   Question q3= Question(" Kanada'nýn baþkenti neresidir?","Ottawa","Toronto","Vancouver", 1);
 TForm1 *Form1;
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
