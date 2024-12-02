@@ -46,6 +46,7 @@ std::queue<Question> LoadQuestions(){
 
 std::queue<Question> questions;
 Question currentQuestion;
+int selectedAnswer;
 
 TForm1 *Form1;
 //---------------------------------------------------------------------------
@@ -63,3 +64,21 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 	 questions.pop();
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm1::Answer1RadioButtonChange(TObject *Sender)
+{
+	selectedAnswer= 1;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Answer2RadioButtonChange(TObject *Sender)
+{
+	selectedAnswer= 2;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Answer3RadioButtonChange(TObject *Sender)
+{
+    selectedAnswer= 3;
+}
+//---------------------------------------------------------------------------
+
