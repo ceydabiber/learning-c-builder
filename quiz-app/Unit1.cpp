@@ -43,10 +43,23 @@ std::queue<Question> LoadQuestions(){
 
 	return questions;
 	}
+
+std::queue<Question> questions;
+Question currentQuestion;
+
 TForm1 *Form1;
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
 {
+	 questions= LoadQuestions();
+	 currentQuestion= questions.front();
+
+	 QuestionLabel->Text= currentQuestion.Text;
+	 Answer1RadioButton->Text= currentQuestion.Answer1;
+	 Answer2RadioButton->Text= currentQuestion.Answer2;
+	 Answer3RadioButton->Text= currentQuestion.Answer3;
+
+	 questions.pop();
 }
 //---------------------------------------------------------------------------

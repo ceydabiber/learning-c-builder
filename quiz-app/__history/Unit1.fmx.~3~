@@ -1,0 +1,54 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 256
+  ClientWidth = 492
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 24.000000000000000000
+    Text = 'Pop Quiz '
+    TabOrder = 0
+  end
+  object RadioButton1: TRadioButton
+    Position.X = 24.000000000000000000
+    Position.Y = 80.000000000000000000
+    TabOrder = 1
+    Text = 'RadioButton1'
+  end
+  object RadioButton2: TRadioButton
+    Position.X = 24.000000000000000000
+    Position.Y = 120.000000000000000000
+    TabOrder = 2
+    Text = 'RadioButton2'
+  end
+  object RadioButton3: TRadioButton
+    Position.X = 24.000000000000000000
+    Position.Y = 163.000000000000000000
+    TabOrder = 3
+    Text = 'RadioButton3'
+  end
+  object Button1: TButton
+    Position.X = 24.000000000000000000
+    Position.Y = 208.000000000000000000
+    TabOrder = 4
+    Text = 'Button1'
+    TextSettings.Trimming = None
+    object Label2: TLabel
+      Position.X = 272.000000000000000000
+      Position.Y = -168.000000000000000000
+      Text = 'Label2'
+      TabOrder = 5
+    end
+  end
+  object Label3: TLabel
+    Position.X = 424.000000000000000000
+    Position.Y = 40.000000000000000000
+    Text = 'Label3'
+    TabOrder = 5
+  end
+end

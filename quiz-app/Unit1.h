@@ -14,12 +14,13 @@ class TForm1 : public TForm
 {
 __published:	// IDE-managed Components
 	TLabel *Label1;
-	TRadioButton *RadioButton1;
-	TRadioButton *RadioButton2;
-	TRadioButton *RadioButton3;
-	TButton *Button1;
+	TRadioButton *Answer1RadioButton;
+	TRadioButton *Answer2RadioButton;
+	TRadioButton *Answer3RadioButton;
+	TButton *ConfirmButton;
 	TLabel *Label2;
-	TLabel *Label3;
+	TLabel *PointsLabel;
+	TLabel *QuestionLabel;
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
