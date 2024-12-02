@@ -47,6 +47,7 @@ std::queue<Question> LoadQuestions(){
 std::queue<Question> questions;
 Question currentQuestion;
 int selectedAnswer;
+int points= 0;
 
 TForm1 *Form1;
 //---------------------------------------------------------------------------
@@ -60,6 +61,7 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 	 Answer1RadioButton->Text= currentQuestion.Answer1;
 	 Answer2RadioButton->Text= currentQuestion.Answer2;
 	 Answer3RadioButton->Text= currentQuestion.Answer3;
+	 PointsLabel->Text=points;
 
 	 questions.pop();
 }
@@ -79,6 +81,35 @@ void __fastcall TForm1::Answer2RadioButtonChange(TObject *Sender)
 void __fastcall TForm1::Answer3RadioButtonChange(TObject *Sender)
 {
     selectedAnswer= 3;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::ConfirmButtonClick(TObject *Sender)
+{
+	if(selectedAnswer==currentQuestion.CorrectAnswer){
+	   points++;
+	   PointsLabel->Text=points;
+	}
+
+	if(!questions.empty()){
+	   currentQuestion= questions.front();
+
+	   QuestionLabel->Text= currentQuestion.Text;
+	   Answer1RadioButton->Text= currentQuestion.Answer1;
+	   Answer2RadioButton->Text= currentQuestion.Answer2;
+	   Answer3RadioButton->Text= currentQuestion.Answer3;
+
+	   questions.pop();
+
+	   Answer1RadioButton->IsChecked= false;
+	   Answer2RadioButton->IsChecked= false;
+	   Answer3RadioButton->IsChecked= false;
+
+	}
+	else{
+	   ConfirmButton->Enabled=false;
+       ConfirmButton->Text="GAME OVER";
+	}
 }
 //---------------------------------------------------------------------------
 
