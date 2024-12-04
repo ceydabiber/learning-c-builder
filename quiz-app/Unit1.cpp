@@ -18,23 +18,26 @@ class Question{
    char* Answer3;
 
    int CorrectAnswer;
+   int points;
 
    Question(){}
-   Question(char* text, char* ans1, char* ans2, char* ans3, int correctAns){
+   Question(char* text, char* ans1, char* ans2, char* ans3, int correctAns, int point){
 		Text=text;
 		Answer1=ans1;
 		Answer2=ans2;
 		Answer3=ans3;
 		CorrectAnswer=correctAns;
+		points = point;
+
    }
 
 };
 
 std::queue<Question> LoadQuestions(){
 
-	Question q1= Question(" Avustralya'nýn baþkenti neresidir?","Sydney","Melbourne","Canberra", 3);
-	Question q2= Question(" Kýzýl Gezegen olarak bilinen gezegen hangisidir?","Merkür","Mars","Jüpiter", 2);
-	Question q3= Question(" Kanada'nýn baþkenti neresidir?","Ottawa","Toronto","Vancouver", 1);
+	Question q1= Question(" Avustralya'nýn baþkenti neresidir?","Sydney","Melbourne","Canberra", 3, 2);
+	Question q2= Question(" Kýzýl Gezegen olarak bilinen gezegen hangisidir?","Merkür","Mars","Jüpiter", 2, 1);
+	Question q3= Question(" Kanada'nýn baþkenti neresidir?","Ottawa","Toronto","Vancouver", 1, 2);
 
 	std::queue<Question> questions;
 	questions.push(q1);
@@ -47,7 +50,7 @@ std::queue<Question> LoadQuestions(){
 std::queue<Question> questions;
 Question currentQuestion;
 int selectedAnswer;
-int points= 0;
+int score= 0;
 
 TForm1 *Form1;
 //---------------------------------------------------------------------------
@@ -61,7 +64,7 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 	 Answer1RadioButton->Text= currentQuestion.Answer1;
 	 Answer2RadioButton->Text= currentQuestion.Answer2;
 	 Answer3RadioButton->Text= currentQuestion.Answer3;
-	 PointsLabel->Text=points;
+	 PointsLabel->Text=score;
 
 	 questions.pop();
 }
@@ -87,8 +90,8 @@ void __fastcall TForm1::Answer3RadioButtonChange(TObject *Sender)
 void __fastcall TForm1::ConfirmButtonClick(TObject *Sender)
 {
 	if(selectedAnswer==currentQuestion.CorrectAnswer){
-	   points++;
-	   PointsLabel->Text=points;
+	   score += currentQuestion.points;
+	   PointsLabel->Text=score;
 	}
 
 	if(!questions.empty()){
