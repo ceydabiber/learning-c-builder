@@ -92,16 +92,27 @@ void __fastcall TForm1::ConfirmButtonClick(TObject *Sender)
 	if(selectedAnswer==currentQuestion.CorrectAnswer){
 	   score += currentQuestion.points;
 	   PointsLabel->Text=score;
-	   AnswerStatus->Text= "Doðru Cevap!";
+	}
+
+	if(!questions.empty()){
+	   currentQuestion= questions.front();
+
+	   QuestionLabel->Text= currentQuestion.Text;
+	   Answer1RadioButton->Text= currentQuestion.Answer1;
+	   Answer2RadioButton->Text= currentQuestion.Answer2;
+	   Answer3RadioButton->Text= currentQuestion.Answer3;
+
+	   questions.pop();
+
+	   Answer1RadioButton->IsChecked= false;
+	   Answer2RadioButton->IsChecked= false;
+	   Answer3RadioButton->IsChecked= false;
+
 	}
 	else{
-	   AnswerStatus->Text= "Yanlýþ Cevap!";
+	   ConfirmButton->Enabled=false;
+	   ConfirmButton->Text="GAME OVER";
 	}
-
-
-	FeedbackTimer->Enabled= true;
-
-
 }
 //---------------------------------------------------------------------------
 
@@ -127,35 +138,6 @@ void __fastcall TForm1::ResetButtonClick(TObject *Sender)
 
 	 ConfirmButton->Enabled=true;
 	 ConfirmButton->Text="Confirm";
-
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TForm1::FeedbackTimerTimer(TObject *Sender)
-{
-	 FeedbackTimer->Enabled= false;
-	 AnswerStatus->Text="";
-
-     if(!questions.empty()){
-	   currentQuestion= questions.front();
-
-	   QuestionLabel->Text= currentQuestion.Text;
-	   Answer1RadioButton->Text= currentQuestion.Answer1;
-	   Answer2RadioButton->Text= currentQuestion.Answer2;
-	   Answer3RadioButton->Text= currentQuestion.Answer3;
-
-	   questions.pop();
-
-	   Answer1RadioButton->IsChecked= false;
-	   Answer2RadioButton->IsChecked= false;
-	   Answer3RadioButton->IsChecked= false;
-
-	}
-	else{
-	   ConfirmButton->Enabled=false;
-	   ConfirmButton->Text="GAME OVER";
-	}
-
 
 }
 //---------------------------------------------------------------------------
