@@ -111,8 +111,34 @@ void __fastcall TForm1::ConfirmButtonClick(TObject *Sender)
 	}
 	else{
 	   ConfirmButton->Enabled=false;
-       ConfirmButton->Text="GAME OVER";
+	   ConfirmButton->Text="GAME OVER";
 	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::ResetButtonClick(TObject *Sender)
+{
+	 questions= LoadQuestions();
+
+     currentQuestion= questions.front();
+
+	 QuestionLabel->Text= currentQuestion.Text;
+	 Answer1RadioButton->Text= currentQuestion.Answer1;
+	 Answer2RadioButton->Text= currentQuestion.Answer2;
+	 Answer3RadioButton->Text= currentQuestion.Answer3;
+
+	 questions.pop();
+
+	 Answer1RadioButton->IsChecked= false;
+	 Answer2RadioButton->IsChecked= false;
+	 Answer3RadioButton->IsChecked= false;
+
+	 score = 0;
+	 PointsLabel->Text=score;
+
+	 ConfirmButton->Enabled=true;
+	 ConfirmButton->Text="Confirm";
+
 }
 //---------------------------------------------------------------------------
 

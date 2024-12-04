@@ -21,10 +21,12 @@ __published:	// IDE-managed Components
 	TLabel *Label2;
 	TLabel *PointsLabel;
 	TLabel *QuestionLabel;
+	TButton *ResetButton;
 	void __fastcall Answer1RadioButtonChange(TObject *Sender);
 	void __fastcall Answer2RadioButtonChange(TObject *Sender);
 	void __fastcall Answer3RadioButtonChange(TObject *Sender);
 	void __fastcall ConfirmButtonClick(TObject *Sender);
+	void __fastcall ResetButtonClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
