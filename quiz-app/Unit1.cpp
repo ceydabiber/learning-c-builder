@@ -101,7 +101,7 @@ void __fastcall TForm1::ConfirmButtonClick(TObject *Sender)
 
 	FeedbackTimer->Enabled= true;
 	ConfirmButton->Enabled=false;
-	ConfirmButton->Text="Wait";
+	ConfirmButton->Text="Bekleyin";
 
 
 }
@@ -128,7 +128,7 @@ void __fastcall TForm1::ResetButtonClick(TObject *Sender)
 	 PointsLabel->Text=score;
 
 	 ConfirmButton->Enabled=true;
-	 ConfirmButton->Text="Confirm";
+	 ConfirmButton->Text="Doðrula";
 
 }
 //---------------------------------------------------------------------------
@@ -139,7 +139,7 @@ void __fastcall TForm1::FeedbackTimerTimer(TObject *Sender)
 	 AnswerStatus->Text="";
 
 	 ConfirmButton->Enabled=true;
-	 ConfirmButton->Text="Confirm";
+	 ConfirmButton->Text="Doðrula";
 
 
 
@@ -160,7 +160,7 @@ void __fastcall TForm1::FeedbackTimerTimer(TObject *Sender)
 	}
 	else{
 	   ConfirmButton->Enabled=false;
-	   ConfirmButton->Text="GAME OVER";
+	   ConfirmButton->Text="Oyun bitti";
 	}
 
 

@@ -51,7 +51,7 @@ object Form1: TForm1
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 4
-    Text = 'Confirm'
+    Text = 'Do'#287'rula'
     TextSettings.Trimming = None
     OnClick = ConfirmButtonClick
     object Label2: TLabel
@@ -86,7 +86,7 @@ object Form1: TForm1
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 9
-    Text = 'RESTART'
+    Text = 'Yeniden'
     TextSettings.Trimming = None
     OnClick = ResetButtonClick
   end
