@@ -100,6 +100,8 @@ void __fastcall TForm1::ConfirmButtonClick(TObject *Sender)
 
 
 	FeedbackTimer->Enabled= true;
+	ConfirmButton->Enabled=false;
+	ConfirmButton->Text="Wait";
 
 
 }
@@ -135,6 +137,11 @@ void __fastcall TForm1::FeedbackTimerTimer(TObject *Sender)
 {
 	 FeedbackTimer->Enabled= false;
 	 AnswerStatus->Text="";
+
+	 ConfirmButton->Enabled=true;
+	 ConfirmButton->Text="Confirm";
+
+
 
      if(!questions.empty()){
 	   currentQuestion= questions.front();
