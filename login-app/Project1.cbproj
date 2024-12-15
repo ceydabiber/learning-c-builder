@@ -222,6 +222,18 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="LoginForm.cpp">
+            <Form>Form2</Form>
+            <FormType>fmx</FormType>
+            <DependentOn>LoginForm.h</DependentOn>
+            <BuildOrder>3</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="MainForm.cpp">
+            <Form>Form1</Form>
+            <FormType>fmx</FormType>
+            <DependentOn>MainForm.h</DependentOn>
+            <BuildOrder>1</BuildOrder>
+        </CppCompile>
         <CppCompile Include="Project1.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
@@ -229,13 +241,15 @@
             <BuildOrder>2</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
-        <CppCompile Include="Unit1.cpp">
-            <Form>Form1</Form>
+        <CppCompile Include="RegistirationForm.cpp">
+            <Form>Form3</Form>
             <FormType>fmx</FormType>
-            <DependentOn>Unit1.h</DependentOn>
-            <BuildOrder>1</BuildOrder>
+            <DependentOn>RegistirationForm.h</DependentOn>
+            <BuildOrder>4</BuildOrder>
         </CppCompile>
-        <FormResources Include="Unit1.fmx"/>
+        <FormResources Include="MainForm.fmx"/>
+        <FormResources Include="LoginForm.fmx"/>
+        <FormResources Include="RegistirationForm.fmx"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
