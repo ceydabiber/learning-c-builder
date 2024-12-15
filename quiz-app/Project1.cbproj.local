@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.045,C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\ceyda\Desktop\projects\learning-c-builder\quiz-app\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.342,=C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.994,C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\ceyda\Desktop\projects\learning-c-builder\quiz-app\Unit1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.061,C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\ceyda\Desktop\projects\learning-c-builder\quiz-app\Project1.cbproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.342,=C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.885,=C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.045,C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\ceyda\Desktop\projects\learning-c-builder\quiz-app\Project1PCH1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.994,C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\ceyda\Desktop\projects\learning-c-builder\quiz-app\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.885,=C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.994,C:\Users\ceyda\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\ceyda\Desktop\projects\learning-c-builder\quiz-app\Unit1.fmx</Transaction>
   </Transactions>
 </BorlandProject>

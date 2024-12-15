@@ -24,6 +24,7 @@ __published:	// IDE-managed Components
 	TButton *ResetButton;
 	TTimer *FeedbackTimer;
 	TLabel *AnswerStatus;
+	TLabel *QuestionNumberLabel;
 	void __fastcall Answer1RadioButtonChange(TObject *Sender);
 	void __fastcall Answer2RadioButtonChange(TObject *Sender);
 	void __fastcall Answer3RadioButtonChange(TObject *Sender);

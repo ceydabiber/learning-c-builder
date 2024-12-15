@@ -3,7 +3,8 @@
 #include <fmx.h>
 #include <queue>
 #pragma hdrstop
-
+#include <fstream>
+#include <sstream>
 #include "Unit1.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -33,11 +34,13 @@ class Question{
 
 };
 
+
 std::queue<Question> LoadQuestions(){
 
 	Question q1= Question(" Avustralya'nýn baþkenti neresidir?","Sydney","Melbourne","Canberra", 3, 2);
 	Question q2= Question(" Kýzýl Gezegen olarak bilinen gezegen hangisidir?","Merkür","Mars","Jüpiter", 2, 1);
 	Question q3= Question(" Kanada'nýn baþkenti neresidir?","Ottawa","Toronto","Vancouver", 1, 2);
+
 
 	std::queue<Question> questions;
 	questions.push(q1);
@@ -47,10 +50,12 @@ std::queue<Question> LoadQuestions(){
 	return questions;
 	}
 
+
 std::queue<Question> questions;
 Question currentQuestion;
 int selectedAnswer;
 int score= 0;
+int QuestionNumber= 1;
 
 TForm1 *Form1;
 //---------------------------------------------------------------------------
@@ -59,6 +64,8 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 {
 	 questions= LoadQuestions();
 	 currentQuestion= questions.front();
+
+	 QuestionNumberLabel->Text = QuestionNumber;
 
 	 QuestionLabel->Text= currentQuestion.Text;
 	 Answer1RadioButton->Text= currentQuestion.Answer1;
@@ -127,6 +134,8 @@ void __fastcall TForm1::ResetButtonClick(TObject *Sender)
 	 score = 0;
 	 PointsLabel->Text=score;
 
+	 QuestionNumber= 1;
+
 	 ConfirmButton->Enabled=true;
 	 ConfirmButton->Text="Doðrula";
 
@@ -142,7 +151,6 @@ void __fastcall TForm1::FeedbackTimerTimer(TObject *Sender)
 	 ConfirmButton->Text="Doðrula";
 
 
-
      if(!questions.empty()){
 	   currentQuestion= questions.front();
 
@@ -156,6 +164,7 @@ void __fastcall TForm1::FeedbackTimerTimer(TObject *Sender)
 	   Answer1RadioButton->IsChecked= false;
 	   Answer2RadioButton->IsChecked= false;
 	   Answer3RadioButton->IsChecked= false;
+
 
 	}
 	else{

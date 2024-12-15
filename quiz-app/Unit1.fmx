@@ -72,9 +72,9 @@ object Form1: TForm1
   end
   object QuestionLabel: TLabel
     Position.X = 24.000000000000000000
-    Position.Y = 49.000000000000000000
-    Size.Width = 425.000000000000000000
-    Size.Height = 17.000000000000000000
+    Position.Y = 33.000000000000000000
+    Size.Width = 311.000000000000000000
+    Size.Height = 52.000000000000000000
     Size.PlatformDefault = False
     Text = 'QuestionLabel'
     TabOrder = 7
@@ -99,6 +99,10 @@ object Form1: TForm1
     Enabled = False
     Interval = 2000
     OnTimer = FeedbackTimerTimer
-    Left = 440
+  end
+  object QuestionNumberLabel: TLabel
+    Position.X = 340.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 14
   end
 end
