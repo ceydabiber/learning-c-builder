@@ -14,8 +14,10 @@ __fastcall TMyMainForm::TMyMainForm(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
-void __fastcall TMyMainForm::Button1Click(TObject *Sender)
+
+void __fastcall TMyMainForm::loginNavigationButtonClick(TObject *Sender)
 {
 
 }
 //---------------------------------------------------------------------------
+
