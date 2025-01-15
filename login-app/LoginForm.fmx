@@ -1,11 +1,45 @@
-object Form2: TForm2
+object MyLoginForm: TMyLoginForm
   Left = 0
   Top = 0
-  Caption = 'Form2'
-  ClientHeight = 480
-  ClientWidth = 640
+  Caption = 'Login'
+  ClientHeight = 176
+  ClientWidth = 304
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
+  object Label1: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 32.000000000000000000
+    Text = 'Kullan'#305'c'#305' Ad'#305
+    TabOrder = 2
+  end
+  object UsernameEdit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Position.X = 168.000000000000000000
+    Position.Y = 27.000000000000000000
+  end
+  object Label2: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 77.000000000000000000
+    Text = #350'ifre'
+    TabOrder = 0
+  end
+  object PasswordEdit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Position.X = 168.000000000000000000
+    Position.Y = 72.000000000000000000
+  end
+  object LoginButton: TButton
+    Position.X = 168.000000000000000000
+    Position.Y = 128.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Giri'#351' Yap'
+    TextSettings.Trimming = None
+  end
 end

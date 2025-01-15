@@ -7,18 +7,18 @@
 #pragma hdrstop
 #include <System.StartUpCopy.hpp>
 //---------------------------------------------------------------------------
-USEFORM("MainForm.cpp", Form1);
-USEFORM("LoginForm.cpp", Form2);
-USEFORM("RegistirationForm.cpp", Form3);
+USEFORM("MainForm.cpp", MyMainForm);
+USEFORM("LoginForm.cpp", MyLoginForm);
+USEFORM("RegistirationForm.cpp", MyRegistirationForm);
 //---------------------------------------------------------------------------
 extern "C" int FMXmain()
 {
 	try
 	{
 		Application->Initialize();
-		Application->CreateForm(__classid(TForm1), &Form1);
-		Application->CreateForm(__classid(TForm2), &Form2);
-		Application->CreateForm(__classid(TForm3), &Form3);
+		Application->CreateForm(__classid(TMyMainForm), &MyMainForm);
+		Application->CreateForm(__classid(TMyLoginForm), &MyLoginForm);
+		Application->CreateForm(__classid(TMyRegistirationForm), &MyRegistirationForm);
 		Application->Run();
 	}
 	catch (Exception &exception)

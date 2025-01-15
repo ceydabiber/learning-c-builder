@@ -4,13 +4,28 @@
 #pragma hdrstop
 
 #include "MainForm.h"
+#include "LoginForm.h"
+#include "RegistirationForm.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.fmx"
-TForm1 *Form1;
+TMyMainForm *MyMainForm;
 //---------------------------------------------------------------------------
-__fastcall TForm1::TForm1(TComponent* Owner)
+__fastcall TMyMainForm::TMyMainForm(TComponent* Owner)
 	: TForm(Owner)
 {
 }
 //---------------------------------------------------------------------------
+
+void __fastcall TMyMainForm::loginNavigationButtonClick(TObject *Sender)
+{
+	MyLoginForm->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMyMainForm::registirationNavigationButtonClick(TObject *Sender)
+{
+	MyRegistirationForm->Show();
+}
+//---------------------------------------------------------------------------
+

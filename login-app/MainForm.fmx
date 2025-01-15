@@ -1,11 +1,33 @@
-object Form1: TForm1
+object MyMainForm: TMyMainForm
   Left = 0
   Top = 0
-  Caption = 'Form1'
-  ClientHeight = 284
-  ClientWidth = 484
+  Caption = 'Main'
+  ClientHeight = 124
+  ClientWidth = 364
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
+  object loginNavigationButton: TButton
+    Position.X = 48.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Giri'#351' Yap'
+    TextSettings.Trimming = None
+    OnClick = loginNavigationButtonClick
+  end
+  object registirationNavigationButton: TButton
+    Position.X = 208.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Kaydol'
+    TextSettings.Trimming = None
+    OnClick = registirationNavigationButtonClick
+  end
 end
