@@ -19,6 +19,7 @@ object MyLoginForm: TMyLoginForm
     TabOrder = 3
     Position.X = 168.000000000000000000
     Position.Y = 27.000000000000000000
+    OnChange = TextChanged
   end
   object Label2: TLabel
     Position.X = 40.000000000000000000
@@ -31,6 +32,7 @@ object MyLoginForm: TMyLoginForm
     TabOrder = 1
     Position.X = 168.000000000000000000
     Position.Y = 72.000000000000000000
+    OnChange = TextChanged
   end
   object LoginButton: TButton
     Position.X = 168.000000000000000000
@@ -46,6 +48,6 @@ object MyLoginForm: TMyLoginForm
   object loginStatus: TLabel
     Position.X = 32.000000000000000000
     Position.Y = 133.000000000000000000
-    TabOrder = 6
+    TabOrder = 5
   end
 end

@@ -16,7 +16,22 @@ TMyLoginForm *MyLoginForm;
 __fastcall TMyLoginForm::TMyLoginForm(TComponent* Owner)
 	: TForm(Owner)
 {
+	LoginButton->Enabled = false; // Initialize button state
 }
+
+void __fastcall TMyLoginForm::TextChanged(TObject *Sender)
+{
+	// Check if both text fields are non-empty
+	if (!UsernameEdit->Text.IsEmpty() && !PasswordEdit->Text.IsEmpty())
+	{
+		LoginButton->Enabled = true;
+	}
+	else
+	{
+		LoginButton->Enabled = false;
+	}
+}
+
 //---------------------------------------------------------------------------
 std::vector<std::string> parseCommaDelimitedString(std::string line){
 
@@ -33,6 +48,10 @@ std::vector<std::string> parseCommaDelimitedString(std::string line){
 	return result;
 }
 
+const char* convertToCharPtr(AnsiString ansiStr){
+
+	 return ansiStr.c_str();
+}
 
 void __fastcall TMyLoginForm::LoginButtonClick(TObject *Sender)
 {
@@ -49,16 +68,17 @@ void __fastcall TMyLoginForm::LoginButtonClick(TObject *Sender)
                 continue;
             }
 
-            const char* username = parsedLine.at(2).c_str();
-            AnsiString editUsername = UsernameEdit->Text;
-            const char* usernameString = editUsername.c_str();
+			const char* username = parsedLine.at(2).c_str();
+			//AnsiString editUsername = UsernameEdit->Text;
+			//const char* usernameString = editUsername.c_str();
 
-            if (std::strcmp(username, usernameString) == 0) {
-                const char* password = parsedLine.at(3).c_str();
-                AnsiString editPassword = PasswordEdit->Text;
-                const char* passwordString = editPassword.c_str();
 
-                if (std::strcmp(password, passwordString) == 0) {
+			if (std::strcmp(username, convertToCharPtr(UsernameEdit->Text)) == 0) {
+				const char* password = parsedLine.at(3).c_str();
+				//AnsiString editPassword = PasswordEdit->Text;
+				//const char* passwordString = editPassword.c_str();
+
+				if (std::strcmp(password, convertToCharPtr(PasswordEdit->Text)) == 0) {
                     loginStatus->Text = "baþarýlý";
                 } else {
 					loginStatus->Text = "hatalý þifre";

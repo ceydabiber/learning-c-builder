@@ -20,6 +20,7 @@ __published:	// IDE-managed Components
 	TEdit *PasswordEdit;
 	TButton *LoginButton;
 	TLabel *loginStatus;
+    void __fastcall TextChanged(TObject *Sender);
 	void __fastcall LoginButtonClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
