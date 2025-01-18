@@ -55,18 +55,20 @@ const char* convertToCharPtr(AnsiString ansiStr){
 
 void __fastcall TMyLoginForm::LoginButtonClick(TObject *Sender)
 {
-    fstream myFile;
-    myFile.open("registeredUsers.txt", ios::in);
+	fstream myFile;
+	myFile.open("registeredUsers.txt", ios::in);
 
-    if (myFile.is_open()) {
-        std::string line;
+	int success = 0;
 
-        while (getline(myFile, line)) {
-            std::vector<std::string> parsedLine = parseCommaDelimitedString(line);
+	if (myFile.is_open()) {
+		std::string line;
+
+		while (getline(myFile, line) && !success) {
+			std::vector<std::string> parsedLine = parseCommaDelimitedString(line);
 
 			if (parsedLine.size() < 4) {
-                continue;
-            }
+				continue;
+			}
 
 			const char* username = parsedLine.at(2).c_str();
 			//AnsiString editUsername = UsernameEdit->Text;
@@ -79,18 +81,18 @@ void __fastcall TMyLoginForm::LoginButtonClick(TObject *Sender)
 				//const char* passwordString = editPassword.c_str();
 
 				if (std::strcmp(password, convertToCharPtr(PasswordEdit->Text)) == 0) {
-                    loginStatus->Text = "baþarýlý";
-                } else {
+					loginStatus->Text = "baþarýlý";
+					success = 1;
+				} else {
 					loginStatus->Text = "hatalý þifre";
 				}
-                break;
             }
         }
-    } else {
+	} else {
 		loginStatus->Text = "Dosya açýlamadý";
     }
 
-    myFile.close();
+	myFile.close();
 }
 
 //---------------------------------------------------------------------------
