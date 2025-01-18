@@ -87,11 +87,19 @@ void __fastcall TMyLoginForm::LoginButtonClick(TObject *Sender)
             }
         }
     } else {
-        loginStatus->Text = "Dosya açýlamadý";
+		loginStatus->Text = "Dosya açýlamadý";
     }
 
     myFile.close();
 }
 
+//---------------------------------------------------------------------------
+
+void __fastcall TMyLoginForm::clearForm(TObject *Sender, TCloseAction &Action)
+{
+	  loginStatus->Text ="";
+	  UsernameEdit->Text = "";
+	  PasswordEdit->Text = "";
+}
 //---------------------------------------------------------------------------
 
