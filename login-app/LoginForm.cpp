@@ -53,12 +53,14 @@ const char* convertToCharPtr(AnsiString ansiStr){
 	 return ansiStr.c_str();
 }
 
+int counter = 0;
+
 void __fastcall TMyLoginForm::LoginButtonClick(TObject *Sender)
 {
 	fstream myFile;
 	myFile.open("registeredUsers.txt", ios::in);
 
-	int success = 0;
+	bool success = false;
 
 	if (myFile.is_open()) {
 		std::string line;
@@ -82,7 +84,7 @@ void __fastcall TMyLoginForm::LoginButtonClick(TObject *Sender)
 
 				if (std::strcmp(password, convertToCharPtr(PasswordEdit->Text)) == 0) {
 					loginStatus->Text = "baþarýlý";
-					success = 1;
+					success = true;
 				} else {
 					loginStatus->Text = "hatalý þifre";
 				}
@@ -90,9 +92,19 @@ void __fastcall TMyLoginForm::LoginButtonClick(TObject *Sender)
         }
 	} else {
 		loginStatus->Text = "Dosya açýlamadý";
-    }
+	}
 
 	myFile.close();
+
+	if (success) {
+		counter = 0;
+	} else {
+		counter++;
+		if (counter >= 3) {
+			LoginButton->Enabled = false;
+			loginStatus->Text = "deneme hakkýnýz kalmadý. ";
+		}
+	}
 }
 
 //---------------------------------------------------------------------------

@@ -53,14 +53,12 @@ const char* convertToCharPtr(AnsiString ansiStr){
 	 return ansiStr.c_str();
 }
 
-int counter = 0;
-
 void __fastcall TMyLoginForm::LoginButtonClick(TObject *Sender)
 {
 	fstream myFile;
 	myFile.open("registeredUsers.txt", ios::in);
 
-	bool success = false;
+	int success = 0;
 
 	if (myFile.is_open()) {
 		std::string line;
@@ -83,28 +81,18 @@ void __fastcall TMyLoginForm::LoginButtonClick(TObject *Sender)
 				//const char* passwordString = editPassword.c_str();
 
 				if (std::strcmp(password, convertToCharPtr(PasswordEdit->Text)) == 0) {
-					loginStatus->Text = "baÅŸarÄ±lÄ±";
-					success = true;
+					loginStatus->Text = "başarılı";
+					success = 1;
 				} else {
-					loginStatus->Text = "hatalÄ± ÅŸifre";
+					loginStatus->Text = "hatalı şifre";
 				}
             }
         }
 	} else {
-		loginStatus->Text = "Dosya aÃ§Ä±lamadÄ±";
-	}
+		loginStatus->Text = "Dosya açılamadı";
+    }
 
 	myFile.close();
-
-	if (success) {
-		counter = 0;
-	} else {
-		counter++;
-		if (counter >= 3) {
-			LoginButton->Enabled = false;
-			loginStatus->Text = "deneme hakkÄ±nÄ±z bitmiÅŸtir.";
-		}
-	}
 }
 
 //---------------------------------------------------------------------------
