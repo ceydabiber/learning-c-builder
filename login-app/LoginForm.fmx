@@ -41,5 +41,11 @@ object MyLoginForm: TMyLoginForm
     TabOrder = 4
     Text = 'Giri'#351' Yap'
     TextSettings.Trimming = None
+    OnClick = LoginButtonClick
+  end
+  object loginStatus: TLabel
+    Position.X = 32.000000000000000000
+    Position.Y = 133.000000000000000000
+    TabOrder = 6
   end
 end

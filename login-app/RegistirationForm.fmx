@@ -65,5 +65,6 @@ object MyRegistirationForm: TMyRegistirationForm
     TabOrder = 8
     Text = 'Kaydol'
     TextSettings.Trimming = None
+    OnClick = SaveButtonClick
   end
 end

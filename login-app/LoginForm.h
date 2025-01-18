@@ -19,6 +19,8 @@ __published:	// IDE-managed Components
 	TLabel *Label2;
 	TEdit *PasswordEdit;
 	TButton *LoginButton;
+	TLabel *loginStatus;
+	void __fastcall LoginButtonClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TMyLoginForm(TComponent* Owner);

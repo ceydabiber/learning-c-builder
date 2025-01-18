@@ -23,6 +23,7 @@ __published:	// IDE-managed Components
 	TEdit *PasswordEdit;
 	TLabel *Label4;
 	TButton *SaveButton;
+	void __fastcall SaveButtonClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TMyRegistirationForm(TComponent* Owner);
