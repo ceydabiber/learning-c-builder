@@ -42,16 +42,3 @@ A user-friendly login and registration system built with C++ Builder. This appli
 
 > Inspired by [CodeBeauty tutorial](https://www.youtube.com/watch?v=nxHnnQToy5o&t=1679s), this project fixes the bugs that were pointed out in the video.
 
-1. Clone the Repository:
-```bash
-   git clone https://github.com/your-username/learning-c-builder.git
-```
-2. Open the Project in C++ Builder IDE:
-* Open Embarcadero C++ Builder.
-* Navigate to File > Open, and select the project file (.cbproj or .cpp).
-
-3. Build the Project:
-* Click Build or press F9 to compile the project.
-
-4. Run the Application:
-* After building, click Run or press Ctrl + F9 to launch the application.
